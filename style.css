@@ -1,0 +1,308 @@
+/* ==========================
+   ŞELALE ÖĞRENCİ YURDU
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#081421;
+    color:#fff;
+    line-height:1.7;
+}
+
+/* HERO */
+
+.hero{
+    position:relative;
+    height:100vh;
+    background:
+        linear-gradient(rgba(6,15,30,.65),rgba(6,15,30,.75)),
+        url("yurt.jpeg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero-content{
+    max-width:800px;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:72px;
+    color:#FFD54F;
+    letter-spacing:4px;
+}
+
+.hero h2{
+    font-size:36px;
+    margin-top:10px;
+}
+
+.hero p{
+    margin:30px 0;
+    font-size:22px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+/* BUTON */
+
+.btn{
+    display:inline-block;
+    background:#FFD54F;
+    color:#111;
+    padding:16px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.secondary{
+    background:#fff;
+}
+
+/* BÖLÜM */
+
+.section{
+    padding:90px 20px;
+}
+
+.dark{
+    background:#0e1d2d;
+}
+
+.container{
+    width:92%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.container h2{
+    text-align:center;
+    margin-bottom:45px;
+    color:#FFD54F;
+    font-size:38px;
+}
+/* KARTLAR */
+
+.card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.10);
+    backdrop-filter:blur(12px);
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+
+.info p{
+    font-size:20px;
+    margin:15px 0;
+}
+
+/* GALERİ */
+
+.gallery{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:30px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:22px;
+    background:#13263a;
+}
+
+.gallery-item img{
+    width:100%;
+    display:block;
+}
+
+.gallery-text{
+    padding:25px;
+}
+
+.gallery-text h3{
+    color:#FFD54F;
+    margin-bottom:12px;
+}
+
+/* ÖĞRENCİ */
+
+.student-card{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:35px;
+    align-items:center;
+    background:#13263a;
+    border-radius:22px;
+    padding:30px;
+}
+
+.student-card img{
+    width:100%;
+    border-radius:20px;
+}
+
+.student-info h3{
+    color:#FFD54F;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+.student-info p{
+    font-size:18px;
+}
+
+/* GERİ SAYIM */
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.time-box{
+    width:120px;
+    height:120px;
+    background:#FFD54F;
+    color:#111;
+    border-radius:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-weight:700;
+}
+
+.time-box span{
+    font-size:36px;
+}
+
+.time-box small{
+    font-size:15px;
+}
+/* İLETİŞİM */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-bottom:35px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+}
+
+.contact-card h3{
+    color:#FFD54F;
+    margin-bottom:12px;
+}
+
+.button-group{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-top:30px;
+}
+
+.invite-card{
+    text-align:center;
+}
+
+.invite-text{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+footer{
+    background:#06111d;
+    padding:50px 20px;
+    text-align:center;
+}
+
+footer h2{
+    color:#FFD54F;
+    margin-bottom:15px;
+}
+
+footer p{
+    opacity:.9;
+}
+
+/* MOBİL */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:46px;
+}
+
+.hero h2{
+font-size:26px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.student-card{
+grid-template-columns:1fr;
+text-align:center;
+}
+
+.time-box{
+width:90px;
+height:90px;
+}
+
+.time-box span{
+font-size:28px;
+}
+
+.btn{
+width:100%;
+max-width:320px;
+text-align:center;
+}
+
+.button-group,
+.hero-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.container h2{
+font-size:30px;
+}
+
+}
