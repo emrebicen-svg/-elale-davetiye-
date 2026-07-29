@@ -2,55 +2,63 @@
 <html lang="tr">
 
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Şelale Öğrenci Yurdu | Veli Toplantısı</title>
 
-<title>Şelale Öğrenci Yurdu</title>
-
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#081625">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="loading">
+
+<div class="loader"></div>
+
+</div>
 
 <header class="hero">
 
 <div class="overlay"></div>
 
-<div class="heroContent">
+<img src="yurt.jpeg" class="hero-bg">
 
-<h1>ŞELALE</h1>
+<div class="hero-content">
 
-<h2>ÖĞRENCİ YURDU</h2>
+<span class="badge">
+VELİ TOPLANTISI
+</span>
+
+<h1>
+
+ŞELALE
+
+<span>ÖĞRENCİ YURDU</span>
+
+</h1>
 
 <p>
 
-Veli Toplantısına Davetlisiniz
+31 Temmuz 2026 Cuma günü düzenlenecek veli toplantımıza sizleri davet etmekten mutluluk duyuyoruz.
 
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a href="#program">
-
+<a href="#program" class="btn gold">
 Toplantı Bilgileri
-
 </a>
 
-<a target="_blank"
-
-href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic">
-
+<a href="#contact" class="btn transparent">
 Konuma Git
-
 </a>
 
 </div>
@@ -59,9 +67,7 @@ Konuma Git
 
 </header>
 
-<section id="program">
-
-<div class="container">
+<section id="program" class="section">
 
 <h2>
 
@@ -69,55 +75,55 @@ Toplantı Bilgileri
 
 </h2>
 
-<div class="card">
+<div class="glass-card">
 
-<div class="row">
+<div class="info">
 
-<div>
-
-<h3>📅 Tarih</h3>
-
-<p>
-
-31 Temmuz 2026
-
-</p>
-
+<div class="icon">
+📅
 </div>
 
 <div>
 
-<h3>🕢 Saat</h3>
+<h3>Tarih</h3>
 
-<p>
-
-19:30
-
-</p>
+<p>31 Temmuz 2026</p>
 
 </div>
 
 </div>
 
-<div class="address">
+<div class="info">
 
-<h3>
+<div class="icon">
+🕢
+</div>
 
-📍 Adres
+<div>
 
-</h3>
+<h3>Saat</h3>
 
-<p>
-
-Aktoprak Mahallesi
-
-1014 Sokak No:38
-
-Kepez / Antalya
-
-</p>
+<p>19:30</p>
 
 </div>
+
+</div>
+<div class="info">
+
+    <div class="icon">
+        📍
+    </div>
+
+    <div>
+
+        <h3>Adres</h3>
+
+        <p>
+            Aktoprak Mahallesi 1014 Sokak No:38<br>
+            Kepez / Antalya
+        </p>
+
+    </div>
 
 </div>
 
@@ -125,31 +131,7 @@ Kepez / Antalya
 
 </section>
 
-<section>
-
-<div class="container">
-
-<h2>
-
-Yurdumuz
-
-</h2>
-
-<div class="gallery">
-
-<img src="yurt.jpeg">
-
-<img src="öğrenci.jpeg">
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
+<section class="section countdown-section">
 
 <h2>
 
@@ -159,151 +141,169 @@ Toplantıya Kalan Süre
 
 <div class="countdown">
 
-<div>
+<div class="time-box">
 
-<span id="days">
+<span id="days">00</span>
 
-0
-
-</span>
-
-<p>Gün</p>
+<small>Gün</small>
 
 </div>
 
-<div>
+<div class="time-box">
 
-<span id="hours">
+<span id="hours">00</span>
 
-0
-
-</span>
-
-<p>Saat</p>
+<small>Saat</small>
 
 </div>
 
-<div>
+<div class="time-box">
 
-<span id="minutes">
+<span id="minutes">00</span>
 
-0
-
-</span>
-
-<p>Dakika</p>
+<small>Dakika</small>
 
 </div>
 
-<div>
+<div class="time-box">
 
-<span id="seconds">
+<span id="seconds">00</span>
 
-0
-
-</span>
-
-<p>Saniye</p>
+<small>Saniye</small>
 
 </div>
 
-</div>
 </div>
 
 </section>
 
-<section class="contact">
+<section class="section gallery">
 
-<div class="container">
+<h2>
 
-<h2>İletişim</h2>
+Yurdumuz
 
-<div class="contactCards">
+</h2>
 
-<div class="contactCard">
+<div class="gallery-grid">
 
-<h3>📍 Adres</h3>
+<img src="yurt.jpeg" alt="Şelale Öğrenci Yurdu">
 
-<p>
-
-Aktoprak Mahallesi
-
-1014 Sokak No:38
-
-Kepez / Antalya
-
-</p>
+<img src="ogrenci.jpeg" alt="Öğrenciler">
 
 </div>
 
-<div class="contactCard">
+</section>
+<section id="contact" class="section contact">
 
-<h3>📞 Telefon</h3>
+    <h2>İletişim</h2>
 
-<p>
+    <div class="glass-card">
 
-0545 885 37 77
+        <div class="info">
+            <div class="icon">📍</div>
 
-</p>
+            <div>
+                <h3>Adres</h3>
 
-</div>
+                <p>
+                    Aktoprak Mahallesi 1014 Sokak No:38<br>
+                    Kepez / Antalya
+                </p>
+            </div>
+        </div>
 
-</div>
+        <div class="info">
+            <div class="icon">📞</div>
 
-<div class="buttons">
+            <div>
+                <h3>Telefon</h3>
 
-<a href="tel:05458853777">
+                <p>
+                    <a href="tel:05458853777">
+                        0545 885 37 77
+                    </a>
+                </p>
+            </div>
+        </div>
 
-📞 Ara
+    </div>
 
-</a>
+    <div class="button-group">
 
-<a target="_blank"
+        <a href="tel:05458853777" class="btn gold">
+            📞 Ara
+        </a>
 
-href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic">
+        <a href="https://maps.google.com/?q=Aktoprak+Mahallesi+1014+Sokak+No38+Kepez+Antalya"
+           target="_blank"
+           class="btn transparent">
 
-🗺️ Konuma Git
+            🗺️ Konuma Git
 
-</a>
+        </a>
 
-<a target="_blank"
+        <a href="https://wa.me/905458853777"
+           target="_blank"
+           class="btn whatsapp">
 
-href="https://wa.me/905458853777">
+            💬 WhatsApp
 
-💬 WhatsApp
+        </a>
 
-</a>
+    </div>
 
-</div>
+</section>
+<section class="section invitation">
 
-</div>
+    <div class="glass-card invitation-card">
+
+        <h2>Sizleri Aramızda Görmekten Mutluluk Duyarız</h2>
+
+        <p>
+            Değerli velimiz, öğrencilerimizin akademik ve sosyal gelişimini
+            birlikte değerlendireceğimiz veli toplantımıza katılımınız bizler
+            için büyük önem taşımaktadır.
+        </p>
+
+        <div class="button-group">
+
+            <a class="btn gold"
+               href="https://wa.me/905458853777?text=31%20Temmuz%202026%20veli%20toplantısına%20katılacağım."
+               target="_blank">
+
+                ✅ Katılım Bildir
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
 <footer>
 
-<h2>
+    <div class="footer-content">
 
-ŞELALE ÖĞRENCİ YURDU
+        <h2>ŞELALE ÖĞRENCİ YURDU</h2>
 
-</h2>
+        <p>31 Temmuz 2026 • Saat 19:30</p>
 
-<p>
+        <p>
+            Aktoprak Mahallesi 1014 Sokak No:38<br>
+            Kepez / Antalya
+        </p>
 
-31 Temmuz 2026 • Saat 19:30
+        <p class="copyright">
+            © 2026 Şelale Öğrenci Yurdu
+        </p>
 
-</p>
-
-<p>
-
-Sizleri aramızda görmekten mutluluk duyarız.
-
-</p>
+    </div>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
