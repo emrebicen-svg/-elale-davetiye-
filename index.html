@@ -3,257 +3,185 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Şelale Öğrenci Yurdu | Veli Toplantısı</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Şelale Öğrenci Yurdu - Veli Toplantısı</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:#081522;
-color:white;
+background:#f5f5f5;
+color:#333;
 }
 
 .hero{
-
 height:100vh;
-
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
-url("https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80");
-
-background-size:cover;
-background-position:center;
-
+background:url("yurt.jpeg") center/cover;
+position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
 text-align:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero .content{
+position:relative;
+z-index:2;
+max-width:700px;
 padding:20px;
-
+color:white;
 }
 
-.hero-content{
-
-max-width:900px;
-
-}
-
-.hero h1{
-
-font-size:58px;
-color:#FFD54F;
-
+h1{
+font-size:48px;
 margin-bottom:15px;
-
+color:#ffd54f;
 }
 
-.hero h2{
-
-font-size:30px;
-
-margin-bottom:30px;
-
-}
-
-.hero p{
-
-font-size:20px;
-
-line-height:1.8;
-
-margin-bottom:35px;
-
-}
-
-.button{
-
-display:inline-block;
-
-padding:18px 38px;
-
-background:#FFD54F;
-
-color:#111;
-
-font-weight:bold;
-
-text-decoration:none;
-
-border-radius:40px;
-
-}
-
-.section{
-
-padding:80px 20px;
-
-max-width:1000px;
-
-margin:auto;
-
-}
-
-.card{
-
-background:#10263d;
-
-padding:35px;
-
-border-radius:20px;
-
-margin-top:30px;
-
-box-shadow:0 15px 35px rgba(0,0,0,.35);
-
-}
-
-.card h3{
-
-color:#FFD54F;
-
-font-size:30px;
-
+h2{
 margin-bottom:20px;
-
-}
-
-.info{
-
-font-size:22px;
-
-line-height:2;
-
-}
-
-.buttons{
-
-margin-top:35px;
-
-display:flex;
-
-gap:15px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
 }
 
 .btn{
-
-background:#FFD54F;
-
-padding:15px 25px;
-
-border-radius:12px;
-
+display:inline-block;
+margin-top:20px;
+background:#f4b400;
+color:#000;
+padding:15px 35px;
+border-radius:30px;
 text-decoration:none;
-
-color:#111;
-
 font-weight:bold;
+}
 
+section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:white;
+border-radius:15px;
+padding:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+margin-bottom:40px;
+}
+
+.info{
+font-size:20px;
+line-height:2;
+}
+
+.student{
+text-align:center;
+}
+
+.student img{
+width:260px;
+border-radius:20px;
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+margin-bottom:20px;
+}
+
+.map{
+text-align:center;
+}
+
+.map a{
+display:inline-block;
+padding:15px 35px;
+background:#0a7cff;
+color:white;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
 
 footer{
-
-padding:40px;
-
+background:#222;
+color:white;
+padding:30px;
 text-align:center;
-
-opacity:.9;
-
 }
-
 </style>
-</head>
 
+</head>
 <body>
 
-<section class="hero">
+<div class="hero">
 
-<div class="hero-content">
+<div class="content">
 
 <h1>Şelale Öğrenci Yurdu</h1>
 
 <h2>Veli Toplantısına Davetlisiniz</h2>
 
 <p>
+Kıymetli Velimiz,<br><br>
 
-Kıymetli Velimiz,
-
-Öğrencilerimizin akademik ve manevi gelişimlerini birlikte değerlendirmek amacıyla düzenlediğimiz veli toplantımıza teşrifleriniz bizleri onurlandıracaktır.
-
+Öğrencimizin akademik ve manevi gelişimini birlikte değerlendirmek amacıyla düzenleyeceğimiz veli toplantımıza teşrifleriniz bizleri onurlandıracaktır.
 </p>
 
-<a href="#bilgiler" class="button">
-Daveti Görüntüle
-</a>
+<a href="#bilgiler" class="btn">Daveti Görüntüle</a>
 
 </div>
 
-</section>
-<section class="section" id="bilgiler">
+</div>
 
-<div class="card">
+<section id="bilgiler">
 
-<h3>📅 Toplantı Bilgileri</h3>
+<div class="card info">
 
-<div class="info">
+<h2>📅 Toplantı Bilgileri</h2>
 
-📅 <strong>Tarih:</strong> 31 Temmuz 2026<br><br>
+<b>Tarih:</b> 31 Temmuz 2026<br>
 
-🕢 <strong>Saat:</strong> 19.30<br><br>
+<b>Saat:</b> 19.30<br>
 
-📍 <strong>Adres:</strong><br>
+<b>Adres:</b><br>
 Aktoprak Mahallesi 1014 Sokak No:38<br>
-Kepez / Antalya<br><br>
-
-📞 <strong>İletişim:</strong><br>
-0545 885 37 77
+Şelale Öğrenci Yurdu<br>
+Kepez / Antalya
 
 </div>
 
-<div class="buttons">
+<div class="card student">
 
-<a class="btn" href="tel:05458853777">
-📞 Ara
-</a>
+<h2>Öğrencimiz</h2>
 
-<a class="btn"
-href="https://maps.google.com/?q=Aktoprak+Mahallesi+1014+Sokak+No:38+Kepez+Antalya"
-target="_blank">
-
-📍 Konuma Git
-
-</a>
+<img src="ogrenci.jpeg">
 
 </div>
+
+<div class="card map">
+
+<h2>Konum</h2>
+
+<a target="_blank"
+href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic">
+Haritada Aç
+</a>
 
 </div>
 
 </section>
+
 <footer>
 
-<p>
-Sizleri aramızda görmekten mutluluk duyarız.
-</p>
-
-<p style="margin-top:10px;color:#FFD54F;">
-Şelale Öğrenci Yurdu
-</p>
+Şelale Öğrenci Yurdu © 2026
 
 </footer>
 
 </body>
-
 </html>
