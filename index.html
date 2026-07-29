@@ -1,187 +1,171 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Şelale Öğrenci Yurdu - Veli Toplantısı</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
-}
+<title>Şelale Öğrenci Yurdu</title>
 
-body{
-background:#f5f5f5;
-color:#333;
-}
+<link rel="stylesheet" href="style.css">
 
-.hero{
-height:100vh;
-background:url("yurt.jpeg") center/cover;
-position:relative;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.55);
-}
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-.hero .content{
-position:relative;
-z-index:2;
-max-width:700px;
-padding:20px;
-color:white;
-}
-
-h1{
-font-size:48px;
-margin-bottom:15px;
-color:#ffd54f;
-}
-
-h2{
-margin-bottom:20px;
-}
-
-.btn{
-display:inline-block;
-margin-top:20px;
-background:#f4b400;
-color:#000;
-padding:15px 35px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
-}
-
-.card{
-background:white;
-border-radius:15px;
-padding:30px;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
-margin-bottom:40px;
-}
-
-.info{
-font-size:20px;
-line-height:2;
-}
-
-.student{
-text-align:center;
-}
-
-.student img{
-width:260px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.2);
-margin-bottom:20px;
-}
-
-.map{
-text-align:center;
-}
-
-.map a{
-display:inline-block;
-padding:15px 35px;
-background:#0a7cff;
-color:white;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-}
-
-footer{
-background:#222;
-color:white;
-padding:30px;
-text-align:center;
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
+
 <body>
 
-<div class="hero">
+<div id="sparkles"></div>
 
-<div class="content">
+<header class="hero fade-up">
 
-<h1>Şelale Öğrenci Yurdu</h1>
+<div class="overlay"></div>
 
-<h2>Veli Toplantısına Davetlisiniz</h2>
+<div class="hero-content">
 
-<p>
-Kıymetli Velimiz,<br><br>
+<h1>ŞELALE ÖĞRENCİ YURDU</h1>
 
-Öğrencimizin akademik ve manevi gelişimini birlikte değerlendirmek amacıyla düzenleyeceğimiz veli toplantımıza teşrifleriniz bizleri onurlandıracaktır.
-</p>
+<p>Veli Toplantısına Davetlisiniz</p>
 
-<a href="#bilgiler" class="btn">Daveti Görüntüle</a>
+<h2>31 Temmuz 2026</h2>
 
-</div>
+<h3>Saat 19:30</h3>
 
-</div>
-
-<section id="bilgiler">
-
-<div class="card info">
-
-<h2>📅 Toplantı Bilgileri</h2>
-
-<b>Tarih:</b> 31 Temmuz 2026<br>
-
-<b>Saat:</b> 19.30<br>
-
-<b>Adres:</b><br>
-Aktoprak Mahallesi 1014 Sokak No:38<br>
-Şelale Öğrenci Yurdu<br>
-Kepez / Antalya
+<a class="btn" href="#bilgiler">Detayları Gör</a>
 
 </div>
 
-<div class="card student">
+</header>
 
-<h2>Öğrencimiz</h2>
+<section id="bilgiler" class="fade-up">
 
-<img src="ogrenci.jpeg">
+<h2>Program Bilgileri</h2>
 
-</div>
+<div class="card">
 
-<div class="card map">
+<p><strong>📅 Tarih:</strong> 31 Temmuz 2026</p>
 
-<h2>Konum</h2>
+<p><strong>🕢 Saat:</strong> 19:30</p>
 
-<a target="_blank"
-href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic">
-Haritada Aç
+<p><strong>📍 Adres:</strong> Aktoprak Mahallesi 1014 Sokak No:38 Kepez / Şelale</p>
+
+<a class="konum-btn" href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic" target="_blank">
+
+Konuma Git
+
 </a>
 
 </div>
 
 </section>
+<section class="gallery fade-up">
 
-<footer>
+<h2>Şelale Öğrenci Yurdu</h2>
 
-Şelale Öğrenci Yurdu © 2026
+<div class="gallery-grid">
+
+<div class="photo-card">
+
+<img src="yurt.jpeg" alt="Şelale Öğrenci Yurdu">
+
+<h3>Yurdumuz</h3>
+
+</div>
+
+<div class="photo-card">
+
+<img src="öğrenci.jpeg" alt="Öğrenciler">
+
+<h3>Öğrencilerimiz</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="countdown fade-up">
+
+<h2>Toplantıya Kalan Süre</h2>
+
+<div class="timer">
+
+<div class="time-box">
+<span id="days">0</span>
+<small>Gün</small>
+</div>
+
+<div class="time-box">
+<span id="hours">0</span>
+<small>Saat</small>
+</div>
+
+<div class="time-box">
+<span id="minutes">0</span>
+<small>Dakika</small>
+</div>
+
+<div class="time-box">
+<span id="seconds">0</span>
+<small>Saniye</small>
+</div>
+
+</div>
+
+</section>
+<section class="fade-up">
+
+    <h2>Neden Şelale Öğrenci Yurdu?</h2>
+
+    <div class="features">
+
+        <div class="feature">
+            <h3>📚 Eğitim</h3>
+            <p>Planlı ders çalışma ortamı ve etüt desteği.</p>
+        </div>
+
+        <div class="feature">
+            <h3>👨‍🏫 Rehberlik</h3>
+            <p>Öğrencilerimizin gelişimini yakından takip ediyoruz.</p>
+        </div>
+
+        <div class="feature">
+            <h3>🏠 Güvenli Ortam</h3>
+            <p>Temiz, düzenli ve aile sıcaklığında yaşam alanı.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="fade-up">
+
+    <h2>Sizleri Aramızda Görmekten Mutluluk Duyarız</h2>
+
+    <p>
+        📍 Aktoprak Mahallesi 1014 Sokak No:38 Kepez / Antalya
+    </p>
+
+    <p>
+        📅 31 Temmuz 2026 &nbsp; | &nbsp; 🕢 19:30
+    </p>
+
+    <a class="btn"
+       href="https://maps.app.goo.gl/cSFouXNcMd4ebJuN7?g_st=ic"
+       target="_blank">
+       Konuma Git
+    </a>
 
 </footer>
+
+<button id="topBtn">↑</button>
+<script src="script.js"></script>
 
 </body>
 </html>
