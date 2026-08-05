@@ -214,3 +214,50 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 
 });
+openBtn.addEventListener("click", () => {
+
+    setTimeout(() => {
+
+        window.scrollTo({
+
+            top: window.innerHeight,
+
+            behavior: "smooth"
+
+        });
+
+    }, 2200);
+
+});
+openBtn.addEventListener("click", () => {
+
+    openBtn.disabled = true;
+
+    openBtn.style.pointerEvents = "none";
+
+});
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+sections.forEach((section) => {
+
+    observer.observe(section);
+
+});
