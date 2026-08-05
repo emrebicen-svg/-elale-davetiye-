@@ -1,0 +1,610 @@
+/* ===============================
+   ŞELALE ÖĞRENCİ YURDU
+   Premium Theme v2
+================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--gold:#d4af37;
+--gold2:#f5d76e;
+--dark:#081421;
+--dark2:#10263b;
+--white:#ffffff;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Poppins',sans-serif;
+
+background:linear-gradient(180deg,#07131f,#0d2238);
+
+color:#fff;
+
+overflow-x:hidden;
+
+}
+
+/* LOADER */
+
+.loader{
+
+position:fixed;
+
+inset:0;
+
+background:#081421;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:9999;
+
+animation:hideLoader .8s ease 1.5s forwards;
+
+}
+
+.loader-logo{
+
+font-size:54px;
+
+font-weight:800;
+
+color:var(--gold);
+
+letter-spacing:6px;
+
+}
+
+.loader-text{
+
+margin-top:15px;
+
+font-size:20px;
+
+opacity:.8;
+
+}
+
+/* HERO */
+
+.hero{
+
+position:relative;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+overflow:hidden;
+
+}
+
+.hero-bg{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+transform:scale(1.1);
+
+animation:zoomHero 12s linear infinite alternate;
+
+}
+
+.overlay{
+
+position:absolute;
+
+inset:0;
+
+background:linear-gradient(rgba(5,10,20,.60),rgba(5,10,20,.90));
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:5;
+
+width:min(900px,92%);
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 22px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(255,255,255,.15);
+
+margin-bottom:25px;
+
+}
+
+.hero h1{
+
+font-size:72px;
+
+line-height:1.05;
+
+color:var(--gold2);
+
+margin-bottom:20px;
+
+font-weight:800;
+
+}
+
+.hero h2{
+
+font-size:34px;
+
+font-weight:500;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:40px;
+
+}
+
+.hero-button{
+
+display:inline-block;
+
+padding:18px 42px;
+
+background:linear-gradient(45deg,var(--gold),var(--gold2));
+
+color:#111;
+
+font-weight:700;
+
+text-decoration:none;
+
+border-radius:50px;
+
+transition:.35s;
+
+}
+
+.hero-button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 20px 40px rgba(212,175,55,.35);
+
+}
+/* ===============================
+   SECTIONS
+================================== */
+
+.section{
+padding:110px 0;
+}
+
+.container{
+width:min(1200px,92%);
+margin:auto;
+}
+
+.section h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:45px;
+
+color:var(--gold2);
+
+font-weight:700;
+
+}
+
+.section h2 i{
+
+margin-right:12px;
+
+}
+
+/* ===============================
+   GLASS CARDS
+================================== */
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:28px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.10);
+
+border-radius:28px;
+
+padding:40px 30px;
+
+text-align:center;
+
+transition:.35s;
+
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+border-color:rgba(212,175,55,.45);
+
+box-shadow:0 25px 60px rgba(212,175,55,.20);
+
+}
+
+.card i{
+
+font-size:46px;
+
+color:var(--gold2);
+
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+font-size:24px;
+
+margin-bottom:12px;
+
+}
+
+.card p{
+
+color:#e5e5e5;
+
+line-height:1.8;
+
+}
+
+/* ===============================
+   STUDENTS
+================================== */
+
+.students{
+
+text-align:center;
+
+}
+
+.section-text{
+
+max-width:850px;
+
+margin:0 auto 40px;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#ddd;
+
+}
+
+.student-photo{
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.student-photo img{
+
+width:min(850px,100%);
+
+border-radius:28px;
+
+border:6px solid rgba(212,175,55,.65);
+
+box-shadow:0 25px 70px rgba(0,0,0,.35);
+
+transition:.45s;
+
+}
+
+.student-photo img:hover{
+
+transform:scale(1.02);
+
+}
+/* ===============================
+   COUNTDOWN
+================================== */
+
+.countdown-box{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.time-box{
+width:130px;
+height:130px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.10);
+border-radius:25px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+transition:.35s;
+}
+
+.time-box:hover{
+transform:translateY(-8px);
+border-color:var(--gold);
+}
+
+.time-box span{
+font-size:42px;
+font-weight:700;
+color:var(--gold2);
+}
+
+.time-box small{
+margin-top:8px;
+font-size:15px;
+color:#ddd;
+}
+
+/* ===============================
+   CONTACT
+================================== */
+
+.contact-card{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,.07);
+backdrop-filter:blur(18px);
+border-radius:28px;
+padding:45px;
+text-align:center;
+border:1px solid rgba(255,255,255,.10);
+}
+
+.contact-card p{
+font-size:18px;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+gap:10px;
+padding:18px 35px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+transition:.35s;
+}
+
+.btn.gold{
+background:linear-gradient(45deg,var(--gold),var(--gold2));
+color:#111;
+}
+
+.btn.dark{
+background:#10263b;
+color:#fff;
+border:1px solid rgba(255,255,255,.15);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 20px 40px rgba(212,175,55,.25);
+}
+/* ===============================
+   FOOTER
+================================== */
+
+footer{
+padding:70px 20px;
+text-align:center;
+background:#06101b;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+footer h2{
+color:var(--gold2);
+font-size:32px;
+margin-bottom:18px;
+}
+
+footer p{
+color:#d7d7d7;
+margin:8px 0;
+line-height:1.8;
+}
+
+/* ===============================
+   ANIMATIONS
+================================== */
+
+@keyframes zoomHero{
+
+0%{
+transform:scale(1.08);
+}
+
+100%{
+transform:scale(1.18);
+}
+
+}
+
+@keyframes hideLoader{
+
+to{
+
+opacity:0;
+visibility:hidden;
+
+}
+
+}
+
+/* ===============================
+   RESPONSIVE
+================================== */
+
+@media(max-width:992px){
+
+.hero h1{
+font-size:52px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+.section{
+padding:80px 0;
+}
+
+.section h2{
+font-size:34px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.countdown-box{
+gap:15px;
+}
+
+.time-box{
+width:100px;
+height:100px;
+}
+
+.time-box span{
+font-size:30px;
+}
+
+.contact-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.btn{
+width:260px;
+justify-content:center;
+}
+
+.student-photo img{
+width:100%;
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+font-size:40px;
+}
+
+.hero h2{
+font-size:22px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.badge{
+font-size:13px;
+padding:8px 16px;
+}
+
+.time-box{
+width:85px;
+height:85px;
+}
+
+.time-box span{
+font-size:24px;
+}
+
+.section h2{
+font-size:28px;
+}
+
+}
