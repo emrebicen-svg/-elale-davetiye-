@@ -608,3 +608,224 @@ font-size:28px;
 }
 
 }
+/* ===============================
+   OPENING SCREEN
+================================== */
+
+#opening-screen{
+position:fixed;
+inset:0;
+background:#f8f3e8;
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:99999;
+overflow:hidden;
+}
+
+.opening-bg{
+position:absolute;
+inset:0;
+background:
+radial-gradient(circle at top,#fff8ea,#efe3cb);
+}
+
+.invite-wrapper{
+position:relative;
+text-align:center;
+z-index:5;
+}
+
+.invite-title p{
+letter-spacing:8px;
+font-size:13px;
+color:#777;
+margin-bottom:18px;
+}
+
+.invite-title h1{
+font-size:48px;
+color:#17314d;
+margin-bottom:10px;
+}
+
+.invite-title h2{
+font-size:30px;
+font-weight:400;
+color:#b28b3d;
+margin-bottom:50px;
+}
+
+.envelope{
+position:relative;
+width:360px;
+height:240px;
+margin:auto;
+}
+
+.envelope-back{
+position:absolute;
+bottom:0;
+width:100%;
+height:100%;
+background:#16354f;
+border-radius:8px;
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:120px;
+background:#21496b;
+clip-path:polygon(0 0,100% 0,50% 100%);
+transform-origin:top;
+transition:1.2s;
+z-index:20;
+}
+
+.seal{
+position:absolute;
+left:50%;
+top:92px;
+transform:translateX(-50%);
+width:70px;
+height:70px;
+border-radius:50%;
+background:linear-gradient(135deg,#f9d76a,#c99b2a);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+z-index:30;
+}
+
+.letter{
+position:absolute;
+left:20px;
+right:20px;
+bottom:15px;
+height:185px;
+background:white;
+border-radius:8px;
+padding:30px;
+transition:1.2s;
+z-index:5;
+text-align:center;
+}
+
+.letter h2{
+color:#17314d;
+margin-bottom:15px;
+}
+
+.letter p{
+line-height:1.8;
+color:#555;
+}
+
+.open-btn{
+margin-top:55px;
+padding:18px 55px;
+border:none;
+border-radius:50px;
+background:#d4af37;
+color:#111;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+transition:.35s;
+}
+
+.open-btn:hover{
+transform:translateY(-4px);
+box-shadow:0 15px 35px rgba(212,175,55,.35);
+}
+/* ===============================
+   ENVELOPE OPEN ANIMATION
+================================== */
+
+#opening-screen.opened .envelope-flap{
+
+transform:rotateX(180deg);
+
+}
+
+
+#opening-screen.opened .letter{
+
+transform:translateY(-170px);
+
+}
+
+
+#opening-screen.opened .seal{
+
+opacity:0;
+
+transform:translateX(-50%) scale(.5);
+
+}
+
+
+#opening-screen.opened .open-btn{
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+
+#opening-screen.fade-out{
+
+opacity:0;
+
+visibility:hidden;
+
+transition:1.2s;
+
+}
+
+
+/* IŞIK EFEKTİ */
+
+#opening-screen::after{
+
+content:"";
+
+position:absolute;
+
+width:300px;
+
+height:300px;
+
+background:rgba(212,175,55,.18);
+
+border-radius:50%;
+
+filter:blur(80px);
+
+animation:glowMove 5s infinite alternate;
+
+}
+
+
+@keyframes glowMove{
+
+from{
+
+transform:translate(-120px,-80px);
+
+}
+
+to{
+
+transform:translate(120px,80px);
+
+}
+
+}
