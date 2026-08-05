@@ -261,3 +261,25 @@ sections.forEach((section) => {
     observer.observe(section);
 
 });
+window.addEventListener("load", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "instant"
+
+    });
+
+});
+window.addEventListener("load", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "instant"
+
+    });
+
+});
