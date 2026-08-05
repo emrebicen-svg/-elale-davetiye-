@@ -182,3 +182,35 @@ card.style.boxShadow="";
 
 
 console.log("Şelale Öğrenci Yurdu Premium v2 Hazır");
+const openingScreen = document.getElementById("opening-screen");
+const openBtn = document.querySelector(".open-btn");
+
+openBtn.addEventListener("click", () => {
+
+    openingScreen.classList.add("opened");
+
+    setTimeout(() => {
+        openingScreen.classList.add("fade-out");
+    }, 2000);
+
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const music = document.getElementById("bg-music");
+
+    if (music) {
+
+        openBtn.addEventListener("click", () => {
+
+            music.play().catch(() => {});
+
+        });
+
+    }
+
+});
+window.addEventListener("load", () => {
+
+    document.body.classList.add("loaded");
+
+});
