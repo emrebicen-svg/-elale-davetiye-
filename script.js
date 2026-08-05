@@ -1,42 +1,88 @@
-const targetDate = new Date("2026-07-31T19:30:00").getTime();
+// =====================================
+// ŞELALE ÖĞRENCİ YURDU
+// Geri Sayım Sayacı
+// =====================================
 
-const days = document.getElementById("days");
-const hours = document.getElementById("hours");
-const minutes = document.getElementById("minutes");
-const seconds = document.getElementById("seconds");
+const hedefTarih = new Date("August 10, 2026 20:00:00").getTime();
 
-function countdown() {
+function geriSayim() {
 
-    const now = new Date().getTime();
+const simdi = new Date().getTime();
 
-    const distance = targetDate - now;
+const fark = hedefTarih - simdi;
 
-    if (distance <= 0) {
+if (fark <= 0) {
 
-        if(days) days.textContent = "0";
-        if(hours) hours.textContent = "0";
-        if(minutes) minutes.textContent = "0";
-        if(seconds) seconds.textContent = "0";
+document.getElementById("days").innerHTML = "00";
+document.getElementById("hours").innerHTML = "00";
+document.getElementById("minutes").innerHTML = "00";
+document.getElementById("seconds").innerHTML = "00";
 
-        return;
-
-    }
-
-    const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-    const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-    const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-    const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-    if(days) days.textContent = d;
-    if(hours) hours.textContent = h;
-    if(minutes) minutes.textContent = m;
-    if(seconds) seconds.textContent = s;
+return;
 
 }
 
-countdown();
+const gun =
+Math.floor(fark / (1000 * 60 * 60 * 24));
 
-setInterval(countdown,1000);
+const saat =
+Math.floor((fark % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+const dakika =
+Math.floor((fark % (1000 * 60 * 60)) / (1000 * 60));
+
+const saniye =
+Math.floor((fark % (1000 * 60)) / 1000);
+
+document.getElementById("days").innerHTML =
+String(gun).padStart(2,"0");
+
+document.getElementById("hours").innerHTML =
+String(saat).padStart(2,"0");
+
+document.getElementById("minutes").innerHTML =
+String(dakika).padStart(2,"0");
+
+document.getElementById("seconds").innerHTML =
+String(saniye).padStart(2,"0");
+
+}
+
+setInterval(geriSayim,1000);
+
+geriSayim();
+// =====================================
+// Sayfa Efektleri
+// =====================================
+
+// Sayfa açıldığında en üste git
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
+// Yumuşak kaydırma
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const hedef = document.querySelector(this.getAttribute("href"));
+
+        if (hedef) {
+            hedef.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+// Altın butonlara küçük tıklama efekti
+document.querySelectorAll(".btn, .gold-button").forEach(btn => {
+    btn.addEventListener("click", function () {
+        this.style.transform = "scale(0.97)";
+        setTimeout(() => {
+            this.style.transform = "";
+        }, 150);
+    });
+});
+
+console.log("Şelale Öğrenci Yurdu sitesi başarıyla yüklendi.");
